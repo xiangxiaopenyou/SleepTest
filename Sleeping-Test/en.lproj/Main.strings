@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Zo-TZ-FWd"; */
+"4Zo-TZ-FWd.text" = "Label";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "5hY-W7-Ojc"; */
+"5hY-W7-Ojc.text" = "0";
+
+/* Class = "UILabel"; text = "bpm"; ObjectID = "BNe-hh-7Pc"; */
+"BNe-hh-7Pc.text" = "bpm";
+
+/* Class = "UIButton"; normalTitle = "手环"; ObjectID = "K1a-r7-Fnv"; */
+"K1a-r7-Fnv.normalTitle" = "手环";
+
+/* Class = "UILabel"; text = "设备"; ObjectID = "WmY-wd-l8u"; */
+"WmY-wd-l8u.text" = "设备";
+
+/* Class = "UILabel"; text = "---"; ObjectID = "XUf-mF-aT1"; */
+"XUf-mF-aT1.text" = "---";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "f0D-la-7g0"; */
+"f0D-la-7g0.text" = "Label";
+
+/* Class = "UILabel"; text = "心率检测"; ObjectID = "huH-nE-Mzi"; */
+"huH-nE-Mzi.text" = "心率检测";

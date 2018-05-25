@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <CloudPushSDK/CloudPushSDK.h>
+
+static NSString * const kSTAliCloudPushKey = @"24899704";
+static NSString * const kSTAliCloudPushSecret = @"bb59f853ea543e892d24de2a478163c8";
 
 @interface AppDelegate ()
 
@@ -17,6 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self initCloudPush];
+    [self registerAPNS:application];
+    //[CloudPushSDK sendNotificationAck:launchOptions];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onMessageReceived:)
+                                                 name:@"CCPDidReceiveMessageNotification"
+                                               object:nil];
     return YES;
 }
 
@@ -45,6 +56,62 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+/**
+ 苹果推送注册成功回调，将苹果返回的deviceToken上传到CloudPush服务器
+
+ @param application application
+ @param deviceToken deviceToken
+ */
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [CloudPushSDK registerDevice:deviceToken withCallback:^(CloudPushCallbackResult *res) {
+        if (res.success) {
+            NSLog(@"deviceToken注册成功");
+            NSLog(@"deviceId:%@", [CloudPushSDK getDeviceId]);
+        } else {
+            NSLog(@"deviceToken注册失败");
+        }
+    }];
+}
+
+/**
+ 苹果推送注册失败回调
+
+ @param application application
+ @param error 错误信息
+ */
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"%@", error.description);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+}
+
+/**
+ 初始化阿里云推送SDK
+ */
+- (void)initCloudPush {
+    [CloudPushSDK asyncInit:kSTAliCloudPushKey appSecret:kSTAliCloudPushSecret callback:^(CloudPushCallbackResult *res) {
+    }];
+}
+
+/**
+ 注册苹果推送，获取deviceToken用于推送
+
+ @param application application
+ */
+- (void)registerAPNS:(UIApplication *)application {
+    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    [application registerForRemoteNotifications];
+}
+
+- (void)onMessageReceived:(NSNotification *)notification {
+    CCPSysMessage *message = [notification object];
+    NSString *title = [[NSString alloc] initWithData:message.title encoding:NSUTF8StringEncoding];
+    NSString *body = [[NSString alloc] initWithData:message.body encoding:NSUTF8StringEncoding];
+    NSLog(@"Receive message title: %@, content: %@.", title, body);
 }
 
 

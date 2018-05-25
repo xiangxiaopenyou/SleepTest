@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0100EC20B565EC00531E34 /* STCommonDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0100EB20B565EC00531E34 /* STCommonDefines.m */; };
+		3D0100EF20B56A9600531E34 /* STUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0100EE20B56A9600531E34 /* STUtilities.m */; };
+		3D0100F320B5727100531E34 /* STConnectBlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0100F120B5727100531E34 /* STConnectBlueToothViewController.m */; };
+		3D0100F820B5730000531E34 /* XLAlertControllerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0100F620B5730000531E34 /* XLAlertControllerObject.m */; };
+		3D0100FC20B5734B00531E34 /* STBlueToothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0100FB20B5734B00531E34 /* STBlueToothCell.m */; };
+		3D01010320B6651500531E34 /* heart_rate.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3D01010120B6651500531E34 /* heart_rate.gif */; };
+		3D01010E20B6684000531E34 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01010D20B6684000531E34 /* STMainViewController.m */; };
+		3D01011220B68D6600531E34 /* YSCWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01011120B68D6600531E34 /* YSCWaveView.m */; };
+		3D01011720B7AB8700531E34 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01011520B7AB8700531E34 /* STLoginViewController.m */; };
+		3D01011B20B7ABD200531E34 /* STUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01011A20B7ABD200531E34 /* STUserModel.m */; };
+		3D01011E20B7AC3300531E34 /* STBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01011C20B7AC3200531E34 /* STBaseModel.m */; };
+		3D01012120B7B21A00531E34 /* STUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01012020B7B21A00531E34 /* STUserManager.m */; };
 		3D0894CE20B2CBE70077A19C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0894CD20B2CBE70077A19C /* AppDelegate.m */; };
-		3D0894D120B2CBE70077A19C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0894D020B2CBE70077A19C /* ViewController.m */; };
 		3D0894D420B2CBE70077A19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0894D220B2CBE70077A19C /* Main.storyboard */; };
 		3D0894D620B2CBE80077A19C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0894D520B2CBE80077A19C /* Assets.xcassets */; };
 		3D0894D920B2CBE80077A19C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0894D720B2CBE80077A19C /* LaunchScreen.storyboard */; };
 		3D0894DC20B2CBE80077A19C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0894DB20B2CBE80077A19C /* main.m */; };
 		3D0894E620B2CBE80077A19C /* Sleeping_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0894E520B2CBE80077A19C /* Sleeping_TestTests.m */; };
 		3D0894F120B2CBE80077A19C /* Sleeping_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0894F020B2CBE80077A19C /* Sleeping_TestUITests.m */; };
+		3D08950120B2D2950077A19C /* STHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D08950020B2D2950077A19C /* STHttpManager.m */; };
+		3D08950420B2D9BC0077A19C /* STBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D08950320B2D9BC0077A19C /* STBaseRequest.m */; };
+		3D08950C20B4221B0077A19C /* STBleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D08950B20B4221B0077A19C /* STBleManager.m */; };
 		852C39C0EE4FFD9EE1E0571B /* libPods-Sleeping-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA9B65FDEE09C9BC025EC38 /* libPods-Sleeping-Test.a */; };
 /* End PBXBuildFile section */
 
@@ -36,14 +50,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0100E820B5656200531E34 /* Sleeping-Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sleeping-Test-Prefix.pch"; sourceTree = "<group>"; };
+		3D0100EA20B565EC00531E34 /* STCommonDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommonDefines.h; sourceTree = "<group>"; };
+		3D0100EB20B565EC00531E34 /* STCommonDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STCommonDefines.m; sourceTree = "<group>"; };
+		3D0100ED20B56A9600531E34 /* STUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STUtilities.h; sourceTree = "<group>"; };
+		3D0100EE20B56A9600531E34 /* STUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STUtilities.m; sourceTree = "<group>"; };
+		3D0100F020B56AAD00531E34 /* STUtilitiesDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STUtilitiesDefines.h; sourceTree = "<group>"; };
+		3D0100F120B5727100531E34 /* STConnectBlueToothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConnectBlueToothViewController.m; sourceTree = "<group>"; };
+		3D0100F220B5727100531E34 /* STConnectBlueToothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConnectBlueToothViewController.h; sourceTree = "<group>"; };
+		3D0100F620B5730000531E34 /* XLAlertControllerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLAlertControllerObject.m; sourceTree = "<group>"; };
+		3D0100F720B5730000531E34 /* XLAlertControllerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAlertControllerObject.h; sourceTree = "<group>"; };
+		3D0100FA20B5734B00531E34 /* STBlueToothCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STBlueToothCell.h; sourceTree = "<group>"; };
+		3D0100FB20B5734B00531E34 /* STBlueToothCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STBlueToothCell.m; sourceTree = "<group>"; };
+		3D01010120B6651500531E34 /* heart_rate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart_rate.gif; sourceTree = "<group>"; };
+		3D01010A20B6679F00531E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D01010B20B6679F00531E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D01010C20B6684000531E34 /* STMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
+		3D01010D20B6684000531E34 /* STMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
+		3D01011020B68D6600531E34 /* YSCWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCWaveView.h; sourceTree = "<group>"; };
+		3D01011120B68D6600531E34 /* YSCWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCWaveView.m; sourceTree = "<group>"; };
+		3D01011320B6988600531E34 /* Sleeping-Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sleeping-Test.entitlements"; sourceTree = "<group>"; };
+		3D01011520B7AB8700531E34 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginViewController.m; sourceTree = "<group>"; };
+		3D01011620B7AB8700531E34 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoginViewController.h; sourceTree = "<group>"; };
+		3D01011920B7ABD200531E34 /* STUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUserModel.h; sourceTree = "<group>"; };
+		3D01011A20B7ABD200531E34 /* STUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUserModel.m; sourceTree = "<group>"; };
+		3D01011C20B7AC3200531E34 /* STBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBaseModel.m; sourceTree = "<group>"; };
+		3D01011D20B7AC3200531E34 /* STBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBaseModel.h; sourceTree = "<group>"; };
+		3D01011F20B7B21A00531E34 /* STUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUserManager.h; sourceTree = "<group>"; };
+		3D01012020B7B21A00531E34 /* STUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUserManager.m; sourceTree = "<group>"; };
 		3D0894C920B2CBE70077A19C /* Sleeping-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleeping-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0894CC20B2CBE70077A19C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D0894CD20B2CBE70077A19C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3D0894CF20B2CBE70077A19C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D0894D020B2CBE70077A19C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3D0894D320B2CBE70077A19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D0894D520B2CBE80077A19C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D0894D820B2CBE80077A19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D0894DA20B2CBE80077A19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0894DB20B2CBE80077A19C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D0894E120B2CBE80077A19C /* Sleeping-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sleeping-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +90,12 @@
 		3D0894EC20B2CBE80077A19C /* Sleeping-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sleeping-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0894F020B2CBE80077A19C /* Sleeping_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sleeping_TestUITests.m; sourceTree = "<group>"; };
 		3D0894F220B2CBE80077A19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D0894FF20B2D2950077A19C /* STHttpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STHttpManager.h; sourceTree = "<group>"; };
+		3D08950020B2D2950077A19C /* STHttpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STHttpManager.m; sourceTree = "<group>"; };
+		3D08950220B2D9BC0077A19C /* STBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STBaseRequest.h; sourceTree = "<group>"; };
+		3D08950320B2D9BC0077A19C /* STBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STBaseRequest.m; sourceTree = "<group>"; };
+		3D08950A20B4221B0077A19C /* STBleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STBleManager.h; sourceTree = "<group>"; };
+		3D08950B20B4221B0077A19C /* STBleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STBleManager.m; sourceTree = "<group>"; };
 		746DF58988202A11C1849FDD /* Pods-Sleeping-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleeping-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleeping-Test/Pods-Sleeping-Test.release.xcconfig"; sourceTree = "<group>"; };
 		CEA9B65FDEE09C9BC025EC38 /* libPods-Sleeping-Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sleeping-Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6D12FE354D6EAB60FC50DE /* Pods-Sleeping-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleeping-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleeping-Test/Pods-Sleeping-Test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,12 +135,89 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3D0100E920B565D000531E34 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3D0100EA20B565EC00531E34 /* STCommonDefines.h */,
+				3D0100EB20B565EC00531E34 /* STCommonDefines.m */,
+				3D0100ED20B56A9600531E34 /* STUtilities.h */,
+				3D0100EE20B56A9600531E34 /* STUtilities.m */,
+				3D0100F020B56AAD00531E34 /* STUtilitiesDefines.h */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		3D0100F420B572DA00531E34 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				3D01010F20B68D6600531E34 /* YSCWaveView */,
+				3D0100F520B572EE00531E34 /* XLKit */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		3D0100F520B572EE00531E34 /* XLKit */ = {
+			isa = PBXGroup;
+			children = (
+				3D0100F720B5730000531E34 /* XLAlertControllerObject.h */,
+				3D0100F620B5730000531E34 /* XLAlertControllerObject.m */,
+			);
+			path = XLKit;
+			sourceTree = "<group>";
+		};
+		3D0100F920B5733100531E34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D0100FA20B5734B00531E34 /* STBlueToothCell.h */,
+				3D0100FB20B5734B00531E34 /* STBlueToothCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D0100FF20B6651500531E34 /* GifFile */ = {
+			isa = PBXGroup;
+			children = (
+				3D01010120B6651500531E34 /* heart_rate.gif */,
+			);
+			path = GifFile;
+			sourceTree = "<group>";
+		};
+		3D01010F20B68D6600531E34 /* YSCWaveView */ = {
+			isa = PBXGroup;
+			children = (
+				3D01011020B68D6600531E34 /* YSCWaveView.h */,
+				3D01011120B68D6600531E34 /* YSCWaveView.m */,
+			);
+			path = YSCWaveView;
+			sourceTree = "<group>";
+		};
+		3D01011420B7AB7300531E34 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3D01011620B7AB8700531E34 /* STLoginViewController.h */,
+				3D01011520B7AB8700531E34 /* STLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3D01011820B7ABB400531E34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D01011D20B7AC3200531E34 /* STBaseModel.h */,
+				3D01011C20B7AC3200531E34 /* STBaseModel.m */,
+				3D01011920B7ABD200531E34 /* STUserModel.h */,
+				3D01011A20B7ABD200531E34 /* STUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3D0894C020B2CBE70077A19C = {
 			isa = PBXGroup;
 			children = (
 				3D0894CB20B2CBE70077A19C /* Sleeping-Test */,
 				3D0894E420B2CBE80077A19C /* Sleeping-TestTests */,
 				3D0894EF20B2CBE80077A19C /* Sleeping-TestUITests */,
+				3D0100FF20B6651500531E34 /* GifFile */,
 				3D0894CA20B2CBE70077A19C /* Products */,
 				F562C333F74E74619601EB5A /* Pods */,
 				39FDA74D975CB5E37D25F2EA /* Frameworks */,
@@ -116,15 +237,20 @@
 		3D0894CB20B2CBE70077A19C /* Sleeping-Test */ = {
 			isa = PBXGroup;
 			children = (
+				3D01011320B6988600531E34 /* Sleeping-Test.entitlements */,
+				3D0100F420B572DA00531E34 /* Vendor */,
+				3D0100E920B565D000531E34 /* Commons */,
+				3D01011820B7ABB400531E34 /* Model */,
+				3D0894FE20B2D1E50077A19C /* Request */,
+				3D08950520B3F28C0077A19C /* ViewController */,
 				3D0894CC20B2CBE70077A19C /* AppDelegate.h */,
 				3D0894CD20B2CBE70077A19C /* AppDelegate.m */,
-				3D0894CF20B2CBE70077A19C /* ViewController.h */,
-				3D0894D020B2CBE70077A19C /* ViewController.m */,
 				3D0894D220B2CBE70077A19C /* Main.storyboard */,
 				3D0894D520B2CBE80077A19C /* Assets.xcassets */,
 				3D0894D720B2CBE80077A19C /* LaunchScreen.storyboard */,
 				3D0894DA20B2CBE80077A19C /* Info.plist */,
 				3D0894DB20B2CBE80077A19C /* main.m */,
+				3D0100E820B5656200531E34 /* Sleeping-Test-Prefix.pch */,
 			);
 			path = "Sleeping-Test";
 			sourceTree = "<group>";
@@ -145,6 +271,50 @@
 				3D0894F220B2CBE80077A19C /* Info.plist */,
 			);
 			path = "Sleeping-TestUITests";
+			sourceTree = "<group>";
+		};
+		3D0894FE20B2D1E50077A19C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				3D08950D20B422340077A19C /* Manager */,
+				3D08950220B2D9BC0077A19C /* STBaseRequest.h */,
+				3D08950320B2D9BC0077A19C /* STBaseRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		3D08950520B3F28C0077A19C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3D08950620B3F2A40077A19C /* Main */,
+				3D01011420B7AB7300531E34 /* Login */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3D08950620B3F2A40077A19C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3D0100F920B5733100531E34 /* Views */,
+				3D0100F220B5727100531E34 /* STConnectBlueToothViewController.h */,
+				3D0100F120B5727100531E34 /* STConnectBlueToothViewController.m */,
+				3D01010C20B6684000531E34 /* STMainViewController.h */,
+				3D01010D20B6684000531E34 /* STMainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3D08950D20B422340077A19C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3D0894FF20B2D2950077A19C /* STHttpManager.h */,
+				3D08950020B2D2950077A19C /* STHttpManager.m */,
+				3D08950A20B4221B0077A19C /* STBleManager.h */,
+				3D08950B20B4221B0077A19C /* STBleManager.m */,
+				3D01011F20B7B21A00531E34 /* STUserManager.h */,
+				3D01012020B7B21A00531E34 /* STUserManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		F562C333F74E74619601EB5A /* Pods */ = {
@@ -224,6 +394,14 @@
 				TargetAttributes = {
 					3D0894C820B2CBE70077A19C = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					3D0894E020B2CBE80077A19C = {
 						CreatedOnToolsVersion = 9.3;
@@ -240,7 +418,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 3D0894C020B2CBE70077A19C;
@@ -261,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D0894D920B2CBE80077A19C /* LaunchScreen.storyboard in Resources */,
+				3D01010320B6651500531E34 /* heart_rate.gif in Resources */,
 				3D0894D620B2CBE80077A19C /* Assets.xcassets in Resources */,
 				3D0894D420B2CBE70077A19C /* Main.storyboard in Resources */,
 			);
@@ -308,9 +486,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D0894D120B2CBE70077A19C /* ViewController.m in Sources */,
+				3D08950120B2D2950077A19C /* STHttpManager.m in Sources */,
+				3D0100EC20B565EC00531E34 /* STCommonDefines.m in Sources */,
+				3D08950420B2D9BC0077A19C /* STBaseRequest.m in Sources */,
+				3D0100EF20B56A9600531E34 /* STUtilities.m in Sources */,
 				3D0894DC20B2CBE80077A19C /* main.m in Sources */,
+				3D01010E20B6684000531E34 /* STMainViewController.m in Sources */,
+				3D01011B20B7ABD200531E34 /* STUserModel.m in Sources */,
+				3D01011E20B7AC3300531E34 /* STBaseModel.m in Sources */,
+				3D08950C20B4221B0077A19C /* STBleManager.m in Sources */,
 				3D0894CE20B2CBE70077A19C /* AppDelegate.m in Sources */,
+				3D01012120B7B21A00531E34 /* STUserManager.m in Sources */,
+				3D0100FC20B5734B00531E34 /* STBlueToothCell.m in Sources */,
+				3D01011220B68D6600531E34 /* YSCWaveView.m in Sources */,
+				3D0100F320B5727100531E34 /* STConnectBlueToothViewController.m in Sources */,
+				3D01011720B7AB8700531E34 /* STLoginViewController.m in Sources */,
+				3D0100F820B5730000531E34 /* XLAlertControllerObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +540,7 @@
 		3D0894D220B2CBE70077A19C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3D0894D320B2CBE70077A19C /* Base */,
+				3D01010A20B6679F00531E34 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -357,7 +548,7 @@
 		3D0894D720B2CBE80077A19C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3D0894D820B2CBE80077A19C /* Base */,
+				3D01010B20B6679F00531E34 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -480,17 +671,22 @@
 			baseConfigurationReference = ED6D12FE354D6EAB60FC50DE /* Pods-Sleeping-Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2TD7NZ9YYK;
+				CODE_SIGN_ENTITLEMENTS = "Sleeping-Test/Sleeping-Test.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = NU4X48R8LQ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sleeping-Test/Sleeping-Test-Prefix.pch";
 				INFOPLIST_FILE = "Sleeping-Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.medvision.Sleeping-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.medvision.sleepingtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "39715f72-0009-471b-be8e-192a5dc107fa";
+				PROVISIONING_PROFILE_SPECIFIER = "VRSleepingTest-Development";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -499,17 +695,21 @@
 			baseConfigurationReference = 746DF58988202A11C1849FDD /* Pods-Sleeping-Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2TD7NZ9YYK;
+				CODE_SIGN_ENTITLEMENTS = "Sleeping-Test/Sleeping-Test.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sleeping-Test/Sleeping-Test-Prefix.pch";
 				INFOPLIST_FILE = "Sleeping-Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.medvision.Sleeping-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.medvision.sleepingtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

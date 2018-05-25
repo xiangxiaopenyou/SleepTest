@@ -14,29 +14,53 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
+  - AlicloudPush (1.9.8):
+    - AlicloudUT
+    - AlicloudUtils
+  - AlicloudUT (5.2.0.5):
+    - AlicloudUTDID
+  - AlicloudUTDID (1.1.0.19)
+  - AlicloudUtils (1.3.4):
+    - AlicloudUTDID
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
+  - AlicloudPush (~> 1.9.8)
   - Masonry
   - MBProgressHUD
+  - SDWebImage
   - YYModel
 
 SPEC REPOS:
+  https://github.com/aliyun/aliyun-specs.git:
+    - AlicloudPush
+    - AlicloudUT
+    - AlicloudUTDID
+    - AlicloudUtils
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Masonry
     - MBProgressHUD
+    - SDWebImage
     - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  AlicloudPush: 50df02cff716d9ac950ceb89195d447e7af003a2
+  AlicloudUT: 1b52965b97c5fc0b630901ce184391fbe1ef8479
+  AlicloudUTDID: 14b582e41b39bc66e5a3420b61dafd0567ef4603
+  AlicloudUtils: 88748f2708aced0a64836a9c5c31330c555c346b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 604a6983f62f248ebc9826a550c52ec6a9d8a00b
+PODFILE CHECKSUM: 727d0d6644c0e509c3514538325eb3c8549cb48d
 
 COCOAPODS: 1.5.2
