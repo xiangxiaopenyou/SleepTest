@@ -7,7 +7,7 @@
 //
 
 #import "STHttpManager.h"
-static NSString * const BASEURL = @"";
+static NSString * const BASEURL = @"http://10.12.254.34:8080/api/v1/appDevelopmentControllerSm/";
 
 @implementation STHttpManager
 + (instancetype)sharedManager {

@@ -31,6 +31,7 @@
     if (userModel.userId) {
         [[NSUserDefaults standardUserDefaults] setObject:userModel.userId forKey:USERID];
     }
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 - (void)removeUserInfo {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:USERID];

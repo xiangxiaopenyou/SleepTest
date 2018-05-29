@@ -19,6 +19,7 @@
 		3D01011B20B7ABD200531E34 /* STUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01011A20B7ABD200531E34 /* STUserModel.m */; };
 		3D01011E20B7AC3300531E34 /* STBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01011C20B7AC3200531E34 /* STBaseModel.m */; };
 		3D01012120B7B21A00531E34 /* STUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01012020B7B21A00531E34 /* STUserManager.m */; };
+		3D01012420BBDCC300531E34 /* STOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01012320BBDCC300531E34 /* STOrderModel.m */; };
 		3D0894CE20B2CBE70077A19C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0894CD20B2CBE70077A19C /* AppDelegate.m */; };
 		3D0894D420B2CBE70077A19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0894D220B2CBE70077A19C /* Main.storyboard */; };
 		3D0894D620B2CBE80077A19C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0894D520B2CBE80077A19C /* Assets.xcassets */; };
@@ -78,6 +79,8 @@
 		3D01011D20B7AC3200531E34 /* STBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBaseModel.h; sourceTree = "<group>"; };
 		3D01011F20B7B21A00531E34 /* STUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUserManager.h; sourceTree = "<group>"; };
 		3D01012020B7B21A00531E34 /* STUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUserManager.m; sourceTree = "<group>"; };
+		3D01012220BBDCC300531E34 /* STOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STOrderModel.h; sourceTree = "<group>"; };
+		3D01012320BBDCC300531E34 /* STOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STOrderModel.m; sourceTree = "<group>"; };
 		3D0894C920B2CBE70077A19C /* Sleeping-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleeping-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0894CC20B2CBE70077A19C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D0894CD20B2CBE70077A19C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 				3D01011C20B7AC3200531E34 /* STBaseModel.m */,
 				3D01011920B7ABD200531E34 /* STUserModel.h */,
 				3D01011A20B7ABD200531E34 /* STUserModel.m */,
+				3D01012220BBDCC300531E34 /* STOrderModel.h */,
+				3D01012320BBDCC300531E34 /* STOrderModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D08950120B2D2950077A19C /* STHttpManager.m in Sources */,
+				3D01012420BBDCC300531E34 /* STOrderModel.m in Sources */,
 				3D0100EC20B565EC00531E34 /* STCommonDefines.m in Sources */,
 				3D08950420B2D9BC0077A19C /* STBaseRequest.m in Sources */,
 				3D0100EF20B56A9600531E34 /* STUtilities.m in Sources */,

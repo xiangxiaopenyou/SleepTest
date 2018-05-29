@@ -10,6 +10,8 @@
 #import "STUserModel.h"
 #import "STUserManager.h"
 
+#import <CloudPushSDK/CloudPushSDK.h>
+
 @interface STLoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -48,9 +50,11 @@
         STShowHUDTip(NO, @"请输入密码");
         return;
     }
+    NSString *deviceId = [CloudPushSDK getDeviceId];
     STShowHUDWithMessage(nil);
     NSDictionary *params = @{@"username" : self.usernameTextField.text,
-                             @"password" : self.passwordTextField.text
+                             @"password" : self.passwordTextField.text,
+                             @"pushId"   : deviceId
                              };
     [STUserModel login:params handler:^(id object, NSString *msg) {
         STHideHUD;
@@ -58,6 +62,7 @@
             STShowHUDTip(YES, @"登录成功");
             STUserModel *model = (STUserModel *)object;
             [[STUserManager sharedUserInfo] saveUserInfo:model];
+            [self dismissViewControllerAnimated:NO completion:nil];
         } else {
             STShowHUDTip(NO, msg);
         }

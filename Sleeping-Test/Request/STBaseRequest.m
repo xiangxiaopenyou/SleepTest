@@ -10,6 +10,17 @@
 #import "STHttpManager.h"
 
 @implementation STBaseRequest
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.params = [[NSMutableDictionary alloc] init];
+        if ([[NSUserDefaults standardUserDefaults] stringForKey:USERTOKEN]) {
+            NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:USERTOKEN];
+            [self.params setObject:token forKey:@"token"];
+        }
+    }
+    return self;
+}
 - (void)postRequest:(NSDictionary *)params requestURL:(NSString *)urlString result:(RequestResultHandler)handler {
     if (params) {
         [self.params addEntriesFromDictionary:params];

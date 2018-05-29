@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+
+@class STOrderModel;
 @protocol STBleManagerConnectDelegate <NSObject>
 - (void)didDiscoverUsefulPeripheral:(NSArray *)peripheralsArray;
 - (void)didReceiveConnectResult:(STBleConnectStatus)connectStatus;
@@ -32,7 +34,7 @@
 - (void)connectPeripheral:(CBPeripheral *)tempPeripheral;
 - (void)disconnectPeripheral:(CBPeripheral *)tempPeripheral;
 - (void)readyForStart;
-- (void)startCommand;
-- (void)writeDateToPeripherial:(NSData *)data;
+- (void)startCommand:(STOrderModel *)orderModel;
+- (void)endCommand;
 
 @end

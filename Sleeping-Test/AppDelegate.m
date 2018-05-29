@@ -28,6 +28,7 @@ static NSString * const kSTAliCloudPushSecret = @"bb59f853ea543e892d24de2a478163
                                              selector:@selector(onMessageReceived:)
                                                  name:@"CCPDidReceiveMessageNotification"
                                                object:nil];
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     return YES;
 }
 

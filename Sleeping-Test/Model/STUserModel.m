@@ -10,21 +10,21 @@
 
 @implementation STUserModel
 + (void)login:(NSDictionary *)params handler:(RequestResultHandler)handler {
-    [[STBaseRequest new] postRequest:params requestURL:@"login" result:^(id object, NSString *msg) {
+    [[STBaseRequest new] postRequest:params requestURL:@"login" result:^(id object, NSString *message) {
         if (object) {
             STUserModel *userModel = [STUserModel modelWithDictionary:(NSDictionary *)object];
             !handler ?: handler(userModel, nil);
         } else {
-            !handler ?: handler(nil, msg);
+            !handler ?: handler(nil, message);
         }
     }];
 }
 + (void)logout:(RequestResultHandler)handler {
-    [[STBaseRequest new] postRequest:nil requestURL:@"logout" result:^(id object, NSString *msg) {
+    [[STBaseRequest new] postRequest:nil requestURL:@"logout" result:^(id object, NSString *message) {
         if (object) {
             !handler ?: handler(object, nil);
         } else {
-            !handler ?: handler(nil, msg);
+            !handler ?: handler(nil, message);
         }
     }];
 }
