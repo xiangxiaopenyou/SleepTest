@@ -45,3 +45,6 @@
 
 //判断空值
 #define STIsNullObject(aObject) [STUtilities isNullObject:aObject]
+
+//计算相差多少秒
+#define STCompareDate(aDate) [STUtilities compareDate:aDate]

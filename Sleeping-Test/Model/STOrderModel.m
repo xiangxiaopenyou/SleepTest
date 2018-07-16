@@ -9,6 +9,17 @@
 #import "STOrderModel.h"
 
 @implementation STOrderModel
++ (void)fetchPlayingRecordData:(NSString *)recordId handler:(RequestResultHandler)handler {
+    NSDictionary *params = @{@"recordId" : recordId};
+    [[STBaseRequest new] postRequest:params requestURL:@"taskStatus" result:^(id object, NSString *message) {
+        if (object) {
+            STOrderModel *model = [STOrderModel modelWithDictionary:(NSDictionary *)object];
+            !handler ?: handler(model, nil);
+        } else {
+            !handler ?: handler(nil, message);
+        }
+    }];
+}
 + (void)submitData:(STOrderModel *)model dataArray:(NSArray *)array handler:(RequestResultHandler)handler {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:model.recordId forKey:@"recordId"];

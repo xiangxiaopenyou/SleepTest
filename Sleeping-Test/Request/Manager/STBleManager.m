@@ -29,8 +29,8 @@
     STShowHUDWithMessage(@"正在连接...");
     [self.manager connectPeripheral:tempPeripheral options:nil];
 }
-- (void)disconnectPeripheral:(CBPeripheral *)tempPeripheral {
-    [self.manager cancelPeripheralConnection:tempPeripheral];
+- (void)disconnectPeripheral {
+    [self.manager cancelPeripheralConnection:self.peripheral];
 }
 - (void)readyForStart {
     [self.peripheral discoverServices:nil];
@@ -66,7 +66,6 @@
     Byte bytes3[8] = {0x03, 0x00, 0x83, 0x04, 0x00, 0x00, 0x00, 0x00};
     NSData *data3 = [NSData dataWithBytes:bytes3 length:sizeof(bytes3)];
     [self writeDateToPeripherial:data3];
-    //}
 }
 - (void)endCommand {
     Byte stopBytes[5] = {0x04, 0x00, 0x81, 0x01, 0x00};
@@ -82,6 +81,7 @@
 
 #pragma mark - Central manager delegate
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
+    STHideHUD;
     if (central.state == CBCentralManagerStatePoweredOn) {
         [self.manager scanForPeripheralsWithServices:nil options:nil];
     } else {
@@ -171,6 +171,7 @@
             Byte bytes[12] = {0x01, 0x5A, 0x81, 0x08, 0x55, 0xAA, 0x11, 0x22, 0x64, 0x18, 0x90, 0x99};
             NSData *data = [NSData dataWithBytes:bytes length:sizeof(bytes)];
             [self writeDateToPeripherial:data];
+            [self endCommand];
             //[self startCommand:nil];
         }
         if ([characteristic.UUID.UUIDString isEqualToString:@"6E400003-B5A3-F393-E0A9-E50E24DCCA9E"])

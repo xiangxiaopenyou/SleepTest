@@ -7,7 +7,8 @@
 //
 
 #import "STHttpManager.h"
-static NSString * const BASEURL = @"http://10.12.254.34:8080/api/v1/appDevelopmentControllerSm/";
+//static NSString * const BASEURL = @"http://10.12.254.34:8080/api/v1/appDevelopmentControllerSm/";
+static NSString * const BASEURL = @"http://support.med-vision.cn/api/v1/appDevelopmentControllerSm/";
 
 @implementation STHttpManager
 + (instancetype)sharedManager {
@@ -19,6 +20,7 @@ static NSString * const BASEURL = @"http://10.12.254.34:8080/api/v1/appDevelopme
         [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [requestSerializer setHTTPShouldHandleCookies:YES];
+        requestSerializer.timeoutInterval = 20;
         AFJSONResponseSerializer *responceSerializer = [AFJSONResponseSerializer serializer];
         NSMutableSet *types = [[responceSerializer acceptableContentTypes] mutableCopy];
         [types addObjectsFromArray:@[@"text/plain", @"text/html"]];

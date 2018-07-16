@@ -20,6 +20,8 @@
 		3D01011E20B7AC3300531E34 /* STBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01011C20B7AC3200531E34 /* STBaseModel.m */; };
 		3D01012120B7B21A00531E34 /* STUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01012020B7B21A00531E34 /* STUserManager.m */; };
 		3D01012420BBDCC300531E34 /* STOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01012320BBDCC300531E34 /* STOrderModel.m */; };
+		3D01012720BE782E00531E34 /* UIButton+ClickBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01012620BE782E00531E34 /* UIButton+ClickBlock.m */; };
+		3D01013020C0E39100531E34 /* STMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D01012F20C0E39100531E34 /* STMainNavigationController.m */; };
 		3D0894CE20B2CBE70077A19C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0894CD20B2CBE70077A19C /* AppDelegate.m */; };
 		3D0894D420B2CBE70077A19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0894D220B2CBE70077A19C /* Main.storyboard */; };
 		3D0894D620B2CBE80077A19C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0894D520B2CBE80077A19C /* Assets.xcassets */; };
@@ -81,6 +83,10 @@
 		3D01012020B7B21A00531E34 /* STUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUserManager.m; sourceTree = "<group>"; };
 		3D01012220BBDCC300531E34 /* STOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STOrderModel.h; sourceTree = "<group>"; };
 		3D01012320BBDCC300531E34 /* STOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STOrderModel.m; sourceTree = "<group>"; };
+		3D01012520BE782E00531E34 /* UIButton+ClickBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ClickBlock.h"; sourceTree = "<group>"; };
+		3D01012620BE782E00531E34 /* UIButton+ClickBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ClickBlock.m"; sourceTree = "<group>"; };
+		3D01012E20C0E39100531E34 /* STMainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainNavigationController.h; sourceTree = "<group>"; };
+		3D01012F20C0E39100531E34 /* STMainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainNavigationController.m; sourceTree = "<group>"; };
 		3D0894C920B2CBE70077A19C /* Sleeping-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleeping-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0894CC20B2CBE70077A19C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D0894CD20B2CBE70077A19C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -164,6 +170,8 @@
 			children = (
 				3D0100F720B5730000531E34 /* XLAlertControllerObject.h */,
 				3D0100F620B5730000531E34 /* XLAlertControllerObject.m */,
+				3D01012520BE782E00531E34 /* UIButton+ClickBlock.h */,
+				3D01012620BE782E00531E34 /* UIButton+ClickBlock.m */,
 			);
 			path = XLKit;
 			sourceTree = "<group>";
@@ -305,6 +313,8 @@
 				3D0100F120B5727100531E34 /* STConnectBlueToothViewController.m */,
 				3D01010C20B6684000531E34 /* STMainViewController.h */,
 				3D01010D20B6684000531E34 /* STMainViewController.m */,
+				3D01012E20C0E39100531E34 /* STMainNavigationController.h */,
+				3D01012F20C0E39100531E34 /* STMainNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -500,11 +510,13 @@
 				3D01010E20B6684000531E34 /* STMainViewController.m in Sources */,
 				3D01011B20B7ABD200531E34 /* STUserModel.m in Sources */,
 				3D01011E20B7AC3300531E34 /* STBaseModel.m in Sources */,
+				3D01013020C0E39100531E34 /* STMainNavigationController.m in Sources */,
 				3D08950C20B4221B0077A19C /* STBleManager.m in Sources */,
 				3D0894CE20B2CBE70077A19C /* AppDelegate.m in Sources */,
 				3D01012120B7B21A00531E34 /* STUserManager.m in Sources */,
 				3D0100FC20B5734B00531E34 /* STBlueToothCell.m in Sources */,
 				3D01011220B68D6600531E34 /* YSCWaveView.m in Sources */,
+				3D01012720BE782E00531E34 /* UIButton+ClickBlock.m in Sources */,
 				3D0100F320B5727100531E34 /* STConnectBlueToothViewController.m in Sources */,
 				3D01011720B7AB8700531E34 /* STLoginViewController.m in Sources */,
 				3D0100F820B5730000531E34 /* XLAlertControllerObject.m in Sources */,
@@ -678,7 +690,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Sleeping-Test/Sleeping-Test.entitlements";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NU4X48R8LQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Sleeping-Test/Sleeping-Test-Prefix.pch";
@@ -690,8 +703,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.medvision.sleepingtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "39715f72-0009-471b-be8e-192a5dc107fa";
-				PROVISIONING_PROFILE_SPECIFIER = "VRSleepingTest-Development";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -702,8 +715,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Sleeping-Test/Sleeping-Test.entitlements";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NU4X48R8LQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Sleeping-Test/Sleeping-Test-Prefix.pch";
 				INFOPLIST_FILE = "Sleeping-Test/Info.plist";

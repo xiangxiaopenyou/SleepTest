@@ -32,7 +32,7 @@
 
 + (STBleManager *)sharedBleManager;
 - (void)connectPeripheral:(CBPeripheral *)tempPeripheral;
-- (void)disconnectPeripheral:(CBPeripheral *)tempPeripheral;
+- (void)disconnectPeripheral;
 - (void)readyForStart;
 - (void)startCommand:(STOrderModel *)orderModel;
 - (void)endCommand;

@@ -38,5 +38,20 @@
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:USERTOKEN];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+- (void)saveRecordData:(NSDictionary *)dictionary {
+    [[NSUserDefaults standardUserDefaults] setObject:dictionary forKey:STRecordDataKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+- (NSDictionary *)recordData {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:STRecordDataKey]) {
+        NSDictionary *dictionay = [[NSUserDefaults standardUserDefaults] dictionaryForKey:STRecordDataKey];
+        return dictionay;
+    }
+    return nil;
+}
+- (void)removeRecordData {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:STRecordDataKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 @end

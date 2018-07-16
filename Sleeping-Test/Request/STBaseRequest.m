@@ -8,6 +8,7 @@
 
 #import "STBaseRequest.h"
 #import "STHttpManager.h"
+#import "STUserManager.h"
 
 @implementation STBaseRequest
 - (instancetype)init {
@@ -29,7 +30,13 @@
         if ([responseObject[@"success"] boolValue]) {
             !handler ?: handler(responseObject[@"data"], nil);
         } else {
-            !handler ?: handler(nil, responseObject[@"message"]);
+            if ([responseObject[@"code"] integerValue] == 97) {
+                !handler ?: handler(nil, responseObject[@"message"]);
+                [[STUserManager sharedUserInfo] removeUserInfo];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"STLoginStatusDidChange" object:nil];
+            } else {
+                !handler ?: handler(nil, responseObject[@"message"]);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         !handler ?: handler(nil, @"请检查网络");

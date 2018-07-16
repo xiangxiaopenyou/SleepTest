@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "STUserModel.h"
+static NSString * const STRecordDataKey = @"RecordData";
 @interface STUserManager : NSObject
 
 + (STUserManager *)sharedUserInfo;
 - (BOOL)isLogined;
 - (void)saveUserInfo:(STUserModel *)userModel;
 - (void)removeUserInfo;
+- (void)saveRecordData:(NSDictionary *)dictionary;
+- (NSDictionary *)recordData;
+- (void)removeRecordData;
 
 @end

@@ -116,5 +116,12 @@
         return NO;
     }
 }
++ (NSInteger)compareDate:(NSDate *)date {
+    NSTimeInterval start = [date timeIntervalSince1970];
+    NSDate *currentDate = [NSDate date];
+    NSTimeInterval end = [currentDate timeIntervalSince1970];
+    NSInteger second = end - start;
+    return second;
+}
 
 @end

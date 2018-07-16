@@ -12,8 +12,10 @@
 @implementation XLAlertControllerObject
 + (void)showWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelString ensureTitle:(NSString *)ensureString ensureBlock:(XLAlertControllerEnsureBlock)block {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelString style:UIAlertActionStyleCancel handler:nil];
-    [alertController addAction:cancelAction];
+    if (cancelString) {
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelString style:UIAlertActionStyleCancel handler:nil];
+        [alertController addAction:cancelAction];
+    }
     if (ensureString) {
         UIAlertAction *playAction = [UIAlertAction actionWithTitle:ensureString style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             block();

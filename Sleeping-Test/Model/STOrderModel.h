@@ -18,6 +18,8 @@
 @property (copy, nonatomic) NSString *sceneName;
 @property (copy, nonatomic) NSString *sceneImageUrl;
 @property (strong, nonatomic) NSNumber *age;
+@property (strong, nonatomic) NSNumber *state;
 
++ (void)fetchPlayingRecordData:(NSString *)recordId handler:(RequestResultHandler)handler;
 + (void)submitData:(STOrderModel *)model dataArray:(NSArray *)array handler:(RequestResultHandler)handler;
 @end

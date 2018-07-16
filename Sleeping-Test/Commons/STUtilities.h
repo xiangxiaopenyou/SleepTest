@@ -17,4 +17,5 @@
 + (void)hideHUD;
 + (void)showHUDTip:(BOOL)isSuccess message:(NSString *)message;
 + (BOOL)isNullObject:(id)anObject;
++ (NSInteger)compareDate:(NSDate *)date;
 @end

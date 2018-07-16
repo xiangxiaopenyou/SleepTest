@@ -36,25 +36,43 @@
     [STBleManager sharedBleManager].connectDelegate = self;
     [STBleManager sharedBleManager].centralStatusBlock = ^(BOOL state) {
         if (!state) {
-            STShowHUDTip(NO, @"请连接蓝牙");
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            [self bleDisconnected];
         }
     };
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStatusChanged) name:@"STLoginStatusDidChange" object:nil];
+    [self loginStatusChanged];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    //NSDictionary *options = @{CBCentralManagerScanOptionAllowDuplicatesKey : [NSNumber numberWithBool:YES]};
     [[STBleManager sharedBleManager].manager scanForPeripheralsWithServices:nil options:nil];
     if (self.bleArray.count == 0) {
         self.bleArray = [[STBleManager sharedBleManager].blesArray mutableCopy];
-    }
-    if (![[STUserManager sharedUserInfo] isLogined]) {
-        STLoginViewController *loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"STLogin"];
-        [self presentViewController:loginController animated:NO completion:nil];
     }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Private method
+- (void)loginStatusChanged {
+    if (![[STUserManager sharedUserInfo] isLogined]) {
+        STLoginViewController *loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"STLogin"];
+        [self presentViewController:loginController animated:NO completion:nil];
+    }
+}
+//蓝牙断开
+- (void)bleDisconnected {
+    UINavigationController *navigation = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    if (navigation.viewControllers.count > 1) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"蓝牙已经断开连接" message:@"数据会保存在本地，请重连继续测试" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }];
+        [alert addAction:confirmAction];
+        [navigation presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 #pragma mark - Ble manager connect delegate
@@ -66,6 +84,9 @@
     if (connectStatus == STBleConnectStatusSuccess) {
         STMainViewController *mainController = [self.storyboard instantiateViewControllerWithIdentifier:@"STMain"];
         [self.navigationController pushViewController:mainController animated:YES];
+    } else {
+        [self bleDisconnected];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"STBleDidDisconnect" object:nil];
     }
 }
 
