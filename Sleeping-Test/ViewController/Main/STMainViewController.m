@@ -172,7 +172,6 @@
     NSDictionary *bodyDictionary = [NSJSONSerialization JSONObjectWithData:message.body options:NSJSONReadingMutableContainers error:nil];
     STOrderModel *orderModel = [STOrderModel modelWithDictionary:bodyDictionary];
     if (orderModel.type.integerValue == 1) {    //开始指令
-        [self.heartRateDataArray removeAllObjects];
         [self startRecord:orderModel];
     } else {                                    //结束指令
         [self endRecord:orderModel];
